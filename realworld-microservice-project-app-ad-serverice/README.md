@@ -29,4 +29,4 @@ docker build ./
 docker run -d --name open-policy-agent -v open-policy-agent-volume:/opt/opa/data openpolicyagent/conftest test --policy opa-docker-security.rego Dockerfile
 
 
-docker run --rm -v open-policy-agent-volume:/opt/opa/data openpolicyagent/conftest test --policy opa-docker-security.rego Dockerfile
+docker run --rm -v open-policy-agent-volume:/opt/opa/data openpolicyagent/conftest test --policy opa-docker-security.rego Dockerfile.
