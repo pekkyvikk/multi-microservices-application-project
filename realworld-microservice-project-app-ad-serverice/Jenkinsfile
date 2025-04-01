@@ -25,8 +25,8 @@ pipeline {
         //         withSonarQubeEnv('Sonar-Server') {
         //             sh ''' 
         //             $SCANNER_HOME/bin/sonar-scanner \
-        //             -Dsonar.projectName=app-ad-serverice \
-        //             -Dsonar.projectKey=app-ad-serverice '''
+        //             -Dsonar.projectName=app-ad-service \
+        //             -Dsonar.projectKey=app-ad-service '''
         //         }
         //     }
         // }
@@ -102,7 +102,7 @@ pipeline {
     post {
     always {
         echo 'Slack Notifications.'
-        slackSend channel: '#general', //update and provide your channel name
+        slackSend channel: '#cuo----multi-microservices-alerts', //update and provide your channel name
         color: COLOR_MAP[currentBuild.currentResult],
         message: "*${currentBuild.currentResult}:* Job Name '${env.JOB_NAME}' build ${env.BUILD_NUMBER} \n Build Timestamp: ${env.BUILD_TIMESTAMP} \n Project Workspace: ${env.WORKSPACE} \n More info at: ${env.BUILD_URL}"
     }
