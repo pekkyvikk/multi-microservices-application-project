@@ -28,7 +28,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: awanmbandi/loadgeneratorapi:latest
+        image: penco/loadgeneratorapi:latest
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
